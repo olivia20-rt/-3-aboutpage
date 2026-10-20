@@ -10,22 +10,9 @@
 		000000000000000000000120 /* #3-aboutpage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "#3-aboutpage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		A5A176613085217F0040BB93 /* Exceptions for "#3-aboutpage" folder in "#3-aboutpage" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 000000000000000100000000 /* #3-aboutpage */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		000000000000000000000010 /* #3-aboutpage */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				A5A176613085217F0040BB93 /* Exceptions for "#3-aboutpage" folder in "#3-aboutpage" target */,
-			);
 			path = "#3-aboutpage";
 			sourceTree = "<group>";
 		};
