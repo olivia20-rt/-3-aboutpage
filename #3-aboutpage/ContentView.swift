@@ -53,6 +53,7 @@ struct ContentView: View {
             galleryImages: ["校慶一", "校慶二", "校慶三", "校慶四"],
             youtubeURL: "https://youtu.be/fXTWMZHqzCY?si=puv4nuOo_6LDMlvK",
             minutedescription: "黎家維（9:24 開始）"
+            
         ),
         PerformanceItem(
             title: "全國學生音樂比賽",
@@ -63,7 +64,7 @@ struct ContentView: View {
             galleryImages: ["全國賽四", "全國賽三", "全國賽二", "全國賽一"],
             youtubeURL: "https://youtu.be/PEieq813LrU?si=CB6KNDJyqulhDZSM",
             minutedescription: "管你樂不樂"
-
+            
         ),
         PerformanceItem(
             title: "社團聯展",
