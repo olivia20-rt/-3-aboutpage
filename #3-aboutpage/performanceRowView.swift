@@ -27,8 +27,8 @@ struct PerformanceRowView: View {
                     Text(item.title)
                         .font(.system(size: 16, weight: .bold))
                         .foregroundColor(.primary)
-                        .lineLimit(2)
-                        .multilineTextAlignment(.leading)
+                        .lineLimit(2) //設定文字最多兩行
+                        .multilineTextAlignment(.leading) //如果分兩行則要對其左側
 
                     // 日期
                     Text(item.date)

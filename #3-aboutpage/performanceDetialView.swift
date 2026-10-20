@@ -9,34 +9,35 @@ import SwiftUI
 
 struct PerformanceDetailView: View {
     let item: PerformanceItem
-    @State private var currentIndex = 0
     @Environment(\.openURL) var openURL //加入這個環境變數，用來開啟外部網址
 
     var body: some View {
-        ScrollView(showsIndicators: false) {
+        ScrollView(showsIndicators: false) { //隱藏捲動軸
             VStack(alignment: .leading, spacing: 24) {
                 // 1. 頂部標題與日期
                 VStack(alignment: .leading, spacing: 6) {
                     HStack(alignment: .center, spacing: 8) {
+                        //標題
                         Text(item.title)
                             .font(.system(size: 26, weight: .bold))
                             .foregroundColor(.primary)
-                            .fixedSize(horizontal: false, vertical: true)
+                            .fixedSize(horizontal: false, vertical: true) //橫向不固定，直向被固定
 
                         Spacer()
-
+                        
+                        //星星符號
                         Image(systemName: "sparkles")
                             .font(.system(size: 20))
                             .foregroundColor(.yellow)
                     }
-
+                    //日蓻
                     Text(item.date)
                         .font(.system(size: 13, weight: .medium))
                         .foregroundColor(.secondary)
                 }
                 // 2. 上方橫式大圖
-                GeometryReader { geometry in
-                    let standardWidth = max(geometry.size.width, 0)
+                GeometryReader { geometry in //測量儀
+                    let standardWidth = max(geometry.size.width, 0) //最小距離不得為負
 
                     Image(item.imageName)
                         .resizable()
@@ -66,7 +67,7 @@ struct PerformanceDetailView: View {
 
                         Spacer()
 
-                        Text("\(item.galleryImages.count) PHOTOS")
+                        Text("\(item.galleryImages.count) PHOTOS") //依照照片張數更改數字
                             .font(.system(size: 10, weight: .semibold))
                             .foregroundColor(.secondary.opacity(0.8))
                     }
@@ -81,7 +82,6 @@ struct PerformanceDetailView: View {
                                     .scaledToFill()
                                     .frame(width: 175, height: 115)  // 卡片尺寸
                                     .clipped()
-                                    .cornerRadius(0)  // 卡片圓角
                                     //每一張照片獨立的陰影
                                     .shadow(
                                         color: .black.opacity(0.12),
@@ -146,6 +146,6 @@ struct PerformanceDetailView: View {
         }
 
         .background(Color(.systemGroupedBackground))
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarTitleDisplayMode(.inline) //控制標題位子大小
     }
 }
